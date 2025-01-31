@@ -146,6 +146,7 @@ public class Main {
 
         } catch (Error e) {
             System.out.println("[ERROR] " + e.getMessage());
+            Constants.printInfo(patientList);
             Constants.endProgram();
             System.exit(0);
         }
