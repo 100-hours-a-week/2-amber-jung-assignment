@@ -136,16 +136,7 @@ public class Main {
                 System.out.println(Constants.ASK_END_MESSAGE);
                 String endSTring = scanner.nextLine().trim();
                 if (endSTring.isEmpty()) {
-                    for (Patient patient : patientList) {
-                        if (patient instanceof Inpatient inpatient) { // 입원 환자 정보 출력
-                            System.out.println(Constants.INPATIENT_TITLE_MESSAGE);
-                            inpatient.printInPatientInfo();
-                        } else { // 외래 환자 정보 출력
-                            System.out.println(Constants.PATIENT_TITLE_MESSAGE);
-                            patient.printPatientInfo();
-                        }
-                        System.out.println();
-                    }
+                    Constants.printInfo(patientList);
                     Constants.endProgram();
                     break;
                 }
