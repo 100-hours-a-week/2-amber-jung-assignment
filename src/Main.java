@@ -134,8 +134,8 @@ public class Main {
                 }
 
                 System.out.println(Constants.ASK_END_MESSAGE);
-                String endSTring = scanner.nextLine().trim();
-                if (endSTring.isEmpty()) {
+                String endString = scanner.nextLine().trim();
+                if (endString.isEmpty()) {
                     Constants.printInfo(patientList);
                     Constants.endProgram();
                     break;
@@ -151,6 +151,4 @@ public class Main {
             System.exit(0);
         }
     }
-
-
 }
