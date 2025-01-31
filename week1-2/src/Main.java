@@ -19,7 +19,7 @@ public class Main {
             while (true) {
 
                 // 환자 유형 입력
-                Constants.showPatientType();
+                showPatientType();
                 String patientTypeString = scanner.nextLine().trim();
                 int patientType;
                 try {
@@ -47,7 +47,7 @@ public class Main {
                 }
 
                 // 성별 입력
-                Constants.showGenderOptions();
+                showGenderOptions();
                 String genderString = scanner.nextLine().trim();
                 int genderInt = 1;
                 try {
@@ -138,8 +138,8 @@ public class Main {
                 System.out.println(Constants.ASK_END_MESSAGE);
                 String endString = scanner.nextLine().trim();
                 if (endString.isEmpty()) {
-                    Constants.printInfo(patientList);
-                    Constants.endProgram();
+                    printInfo(patientList);
+                    endProgram();
                     break;
                 }
                 System.out.println(Constants.CONTINUE_MESSAGE);
@@ -148,9 +148,43 @@ public class Main {
 
         } catch (Error e) {
             System.out.println("[ERROR] " + e.getMessage());
-            Constants.printInfo(patientList);
-            Constants.endProgram();
+            printInfo(patientList);
+            endProgram();
             System.exit(0);
         }
+    }
+
+    private static void printOptions(List<String> options) {
+        for (int i = 0; i < options.size(); i++) {
+            System.out.printf("%d. %s\n", i + 1, options.get(i));
+        }
+    }
+
+    public static void showPatientType() {
+        System.out.println(Constants.GET_PATIENT_TYPE_MESSAGE);
+        printOptions(List.of("외래 환자", "입원 환자"));
+    }
+
+    public static void showGenderOptions() {
+        System.out.println(Constants.GET_PERSON_GENDER_MESSAGE);
+        printOptions(List.of("남자", "여자"));
+    }
+
+    public static void printInfo(List<Patient> patientList) {
+        for (Patient patient : patientList) {
+            if (patient instanceof Inpatient inpatient) { // 입원 환자 정보 출력
+                System.out.println(Constants.INPATIENT_TITLE_MESSAGE);
+                inpatient.printInPatientInfo();
+            } else { // 외래 환자 정보 출력
+                System.out.println(Constants.PATIENT_TITLE_MESSAGE);
+                patient.printPatientInfo();
+            }
+            System.out.println();
+        }
+    }
+
+    public static void endProgram() {
+        System.out.println(Constants.END_MESSAGE);
+        System.out.println(Constants.LINE);
     }
 }
