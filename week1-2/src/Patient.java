@@ -15,7 +15,7 @@ public class Patient extends Person {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy.MM.dd");
 
         this.printPersonInfo();
-        System.out.println("> 질병 코드: " + this.diseaseCode);
+        System.out.printf("%s %04d\n", "> 질병 코드:", this.diseaseCode);
         System.out.println("> 외래 날짜: " + this.visitDate.format(formatter));
     }
 }
