@@ -117,7 +117,7 @@ public class Main {
                     System.out.println(Constants.GET_END_DATE_MESSAGE);
                     String endDateString = scanner.nextLine().trim();
                     LocalDate endDate = null;
-                    if (!startDateString.isEmpty()) {
+                    if (!endDateString.isEmpty()) {
                         try {
                             endDate = LocalDateTime.of(LocalDate.parse(endDateString, formatter), LocalTime.now()).toLocalDate();
                         } catch (DateTimeParseException e) {
