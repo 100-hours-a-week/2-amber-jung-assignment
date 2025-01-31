@@ -24,15 +24,16 @@ public class Main {
                 int patientType;
                 try {
                     patientType = Integer.parseInt(patientTypeString);
-                    if (patientType != 1 && patientType != 2) throw new Error(Constants.PATIENT_TYPE_ERROR_MESSAGE);
+                    if (patientType != 1 && patientType != 2)
+                        throw new IllegalArgumentException(Constants.PATIENT_TYPE_ERROR_MESSAGE);
                 } catch (Exception e) {
-                    throw new Error(Constants.PATIENT_TYPE_ERROR_MESSAGE);
+                    throw new IllegalArgumentException(Constants.PATIENT_TYPE_ERROR_MESSAGE);
                 }
 
                 // 이름 입력
                 System.out.println(Constants.GET_PERSON_NAME_MESSAGE);
                 String name = scanner.nextLine().trim();
-                if (name.isEmpty()) throw new Error(Constants.PERSON_NAME_ERROR_MESSAGE);
+                if (name.isEmpty()) throw new IllegalArgumentException(Constants.PERSON_NAME_ERROR_MESSAGE);
 
                 // 나이 입력
                 System.out.println(Constants.GET_PERSON_AGE_MESSAGE);
@@ -40,9 +41,9 @@ public class Main {
                 try {
                     String ageString = scanner.nextLine().trim();
                     age = Integer.parseInt(ageString);
-                    if (age < 0 || age > 120) throw new Error(Constants.PERSON_AGE_ERROR_MESSAGE);
+                    if (age < 0 || age > 120) throw new IllegalArgumentException(Constants.PERSON_AGE_ERROR_MESSAGE);
                 } catch (Exception e) {
-                    throw new Error(Constants.PERSON_AGE_ERROR_MESSAGE);
+                    throw new IllegalArgumentException(Constants.PERSON_AGE_ERROR_MESSAGE);
                 }
 
                 // 성별 입력
@@ -51,9 +52,10 @@ public class Main {
                 int genderInt = 1;
                 try {
                     genderInt = Integer.parseInt(genderString);
-                    if (genderInt != 1 && genderInt != 2) throw new Error(Constants.PERSON_GENDER_ERROR_MESSAGE);
+                    if (genderInt != 1 && genderInt != 2)
+                        throw new IllegalArgumentException(Constants.PERSON_GENDER_ERROR_MESSAGE);
                 } catch (Exception e) {
-                    throw new Error(Constants.PERSON_GENDER_ERROR_MESSAGE);
+                    throw new IllegalArgumentException(Constants.PERSON_GENDER_ERROR_MESSAGE);
                 }
                 Person.Gender gender = genderInt == 1 ? Person.Gender.MALE : Person.Gender.FEMALE;
 
@@ -63,9 +65,9 @@ public class Main {
                 int diseaseCode;
                 try {
                     diseaseCode = Integer.parseInt(diseaseCodeString);
-                    if (diseaseCode > 9999) throw new Error(Constants.DISEASE_CODE_ERROR_MESSAGE);
+                    if (diseaseCode > 9999) throw new IllegalArgumentException(Constants.DISEASE_CODE_ERROR_MESSAGE);
                 } catch (Exception e) {
-                    throw new Error(Constants.DISEASE_CODE_ERROR_MESSAGE);
+                    throw new IllegalArgumentException(Constants.DISEASE_CODE_ERROR_MESSAGE);
                 }
 
                 // 외래 날짜 입력 - 미입력시 Default 값(현재시간)으로 입력됨
@@ -78,7 +80,7 @@ public class Main {
                     try {
                         visitDate = LocalDateTime.of(LocalDate.parse(visitDateString, formatter), LocalTime.now()).toLocalDate();
                     } catch (DateTimeParseException e) {
-                        throw new Error(Constants.DATE_TIME_ERROR_MESSAGE);
+                        throw new IllegalArgumentException(Constants.DATE_TIME_ERROR_MESSAGE);
                     }
                 }
 
@@ -97,7 +99,7 @@ public class Main {
                     try {
                         roomNumber = Integer.parseInt(roomNumberString);
                     } catch (Exception e) {
-                        throw new Error(Constants.ROOM_NUMBER_ERROR_MESSAGE);
+                        throw new IllegalArgumentException(Constants.ROOM_NUMBER_ERROR_MESSAGE);
                     }
 
                     // 입원 날짜 입력 - 미입력시 Default 값(현재시간)으로 입력됨
@@ -109,7 +111,7 @@ public class Main {
                         try {
                             startDate = LocalDateTime.of(LocalDate.parse(startDateString, formatter), LocalTime.now()).toLocalDate();
                         } catch (DateTimeParseException e) {
-                            throw new Error(Constants.DATE_TIME_ERROR_MESSAGE);
+                            throw new IllegalArgumentException(Constants.DATE_TIME_ERROR_MESSAGE);
                         }
                     }
 
@@ -121,7 +123,7 @@ public class Main {
                         try {
                             endDate = LocalDateTime.of(LocalDate.parse(endDateString, formatter), LocalTime.now()).toLocalDate();
                         } catch (DateTimeParseException e) {
-                            throw new Error(Constants.DATE_TIME_ERROR_MESSAGE);
+                            throw new IllegalArgumentException(Constants.DATE_TIME_ERROR_MESSAGE);
                         }
                     }
 
