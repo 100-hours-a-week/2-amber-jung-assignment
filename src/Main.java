@@ -9,15 +9,17 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        List<Patient> patientList = new ArrayList<>();
+        Thread timeChecker = new Thread(new TimeChecker());
+        timeChecker.start();
 
         Scanner scanner = new Scanner(System.in);
         System.out.println(Constants.LINE);
+        List<Patient> patientList = new ArrayList<>();
+
         System.out.println(Constants.WELCOME_MESSAGE);
 
         try {
             while (true) {
-
                 // 환자 유형 입력
                 ProgramManager.showPatientType();
                 String patientTypeString = scanner.nextLine().trim();

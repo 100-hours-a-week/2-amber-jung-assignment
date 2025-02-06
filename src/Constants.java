@@ -4,6 +4,7 @@ public final class Constants {
     public static final String ASK_END_MESSAGE = "\n프로그램을 종료하시겠습니까? - ENTER 입력시 종료됩니다. (이외 키 입력시 새 환자 등록)";
     public static final String END_MESSAGE = "프로그램을 종료합니다.";
     public static final String CONTINUE_MESSAGE = "새로운 환자를 등록합니다.";
+    public static final String NOT_OPERATING_TIME_MESSAGE = "운영 시간이 아닙니다. (09:00 - 18:00)";
 
     public static final String GET_PATIENT_TYPE_MESSAGE = "환자 종류를 선택해주세요.";
 
