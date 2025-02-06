@@ -2,7 +2,7 @@ import java.time.LocalDateTime;
 import java.time.LocalTime;
 
 public class TimeChecker implements Runnable {
-    private final static LocalTime closeTime = LocalTime.of(10, 0);
+    private final static LocalTime closeTime = LocalTime.of(18, 0, 0);
 
     @Override
     public void run() {
