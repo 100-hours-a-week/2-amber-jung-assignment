@@ -150,7 +150,6 @@ public class Main {
             System.out.println("[ERROR] " + e.getMessage());
             ProgramManager.printInfo(patientList);
             ProgramManager.endProgram();
-            System.exit(0);
         }
     }
 }

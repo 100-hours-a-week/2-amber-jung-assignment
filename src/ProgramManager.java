@@ -34,6 +34,7 @@ public final class ProgramManager {
     public static void endProgram() {
         System.out.println(Constants.END_MESSAGE);
         System.out.println(Constants.LINE);
+        System.exit(0);
     }
 
     private ProgramManager() {
