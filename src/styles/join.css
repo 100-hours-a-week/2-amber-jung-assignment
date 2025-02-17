@@ -1,0 +1,75 @@
+.join {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.join-container {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: min(80%, 400px);
+}
+
+.join-profile-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.join-profile-title {
+  font-weight: 600;
+}
+
+.join-add-profile-btn {
+  width: 150px;
+  height: 150px;
+  background: lightgray;
+  border: none;
+  border-radius: 75px;
+  margin: 20px 0;
+  align-self: center;
+  cursor: pointer;
+}
+
+.profile-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.join-input-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.join-btn {
+  font-weight: 600;
+  padding: 8px 0;
+  border: none;
+  outline: none;
+  width: 100%;
+  color: white;
+  border-radius: 8px;
+  margin: 10px 0 8px 0;
+  cursor: pointer;
+  background-color: #7f6aee;
+}
+
+.join-btn:disabled {
+  background-color: #aca0eb;
+  cursor: not-allowed;
+}
+
+.goto-login {
+  font-size: 13px;
+  cursor: pointer;
+  color: darkgray;
+}
