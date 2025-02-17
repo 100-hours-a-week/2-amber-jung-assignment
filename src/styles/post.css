@@ -2,6 +2,14 @@ body {
   background-color: #f4f5f7;
 }
 
+.header-content {
+  width: min(800px, 90%);
+}
+
+.back-arrow {
+  visibility: hidden;
+}
+
 .post {
   display: flex;
   flex-direction: column;
