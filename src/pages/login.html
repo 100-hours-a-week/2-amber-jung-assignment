@@ -8,22 +8,23 @@
   </head>
   <body>
     <main class="login">
-      <div class="login-head">아무 말 대잔치</div>
+      <div class="header">아무 말 대잔치</div>
       <div class="login-container">
-        <div class="login-title">로그인</div>
-        <div class="input-group">
+        <div class="title">로그인</div>
+        <form class="login-input-container">
           <div class="input-container">
-            <div class="label">이메일</div>
-            <input placeholder="이메일을 입력하세요" />
+            <label class="label">이메일</label>
+            <input type="email" placeholder="이메일을 입력하세요" />
+            <div class="helper-text"></div>
           </div>
           <div class="input-container">
-            <div class="label">비밀번호</div>
-            <input placeholder="비밀번호를 입력하세요" />
-            <div class="helper-text">* helper text</div>
+            <label class="label">비밀번호</label>
+            <input type="password" placeholder="비밀번호를 입력하세요" />
+            <div class="helper-text"></div>
           </div>
-        </div>
-        <button class="login-btn disabled">로그인</button>
-        <a class="join-btn" href="join.html">회원가입</a>
+        </form>
+        <button type="submit" disabled class="login-btn">로그인</button>
+        <a class="goto-join" href="join.html">회원가입</a>
       </div>
     </main>
     <script type="module" src="../js/login.js"></script>

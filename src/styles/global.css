@@ -58,15 +58,6 @@ a {
   background-color: white;
 }
 
-.btn-disabled {
-  background-color: #aca0eb;
-  cursor: not-allowed;
-}
-
-.btn-active {
-  background-color: #7f6aee;
-}
-
 button {
   padding: 0;
   cursor: pointer;
