@@ -55,10 +55,10 @@ a {
   padding: 36px 0px;
   border-bottom: 1px solid #000;
   text-align: center;
-  background-color: white;
 }
 
 button {
   padding: 0;
   cursor: pointer;
+  border: none;
 }
