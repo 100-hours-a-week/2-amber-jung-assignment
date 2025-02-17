@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const btn = document.createElement('button')
     btn.className = 'post-article'
     btn.addEventListener('click', () => {
-      window.location.href = `/post/${post.postId}`
+      window.location.href = `/src/pages/post-detail.html?postId=${post.postId}`
     })
 
     btn.innerHTML = `

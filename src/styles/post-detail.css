@@ -71,7 +71,6 @@
 }
 
 .post-thumbnail {
-  background-color: #d9d9d9;
   width: 100%;
   aspect-ratio: 1.8;
   border: none;
@@ -83,6 +82,7 @@
   font-size: 15px;
   font-weight: 400;
   margin-bottom: 32px;
+  line-height: 21.15px;
 }
 
 .post-summary {

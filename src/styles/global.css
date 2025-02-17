@@ -73,6 +73,10 @@ a {
   border-radius: 18px;
 }
 
+.back-arrow {
+  background-color: transparent;
+}
+
 button {
   padding: 0;
   cursor: pointer;
