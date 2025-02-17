@@ -21,7 +21,7 @@ html {
   font-weight: 600;
 }
 
-input {
+input:not([type='file']) {
   border-radius: 4px;
   border: 1px solid #000;
   outline: none;
@@ -29,7 +29,7 @@ input {
 }
 
 input::placeholder {
-  color: gray;
+  color: #838486;
 }
 
 .helper-text {
