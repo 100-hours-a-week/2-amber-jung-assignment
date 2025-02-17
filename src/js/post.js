@@ -36,4 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     postList.appendChild(btn)
   })
+
+  const gotoEditBtn = document.querySelector('.goto-edit')
+  gotoEditBtn.addEventListener('click', () => (window.location.href = '/src/pages/write.html?type=add'))
 })
