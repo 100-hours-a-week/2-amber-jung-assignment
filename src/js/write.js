@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const type = urlParams.get('type')
   const postId = urlParams.get('postId')
 
+  const header = document.querySelector('.write-title')
   const titleInput = document.getElementById('post-title')
   const titleHelper = document.querySelector('#post-title + .helper-text')
   const contentTextarea = document.querySelector('.post-article')
@@ -22,6 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // type에 따라 버튼 text 변경
   if (type === 'edit' && postId) {
+    header.textContent = '게시글 수정'
     writeBtn.textContent = '수정하기'
 
     // 수정인 경우 기존 글 데이터 보여주기
@@ -29,7 +31,10 @@ document.addEventListener('DOMContentLoaded', () => {
     titleInput.value = postData.title
     contentTextarea.value = postData.content
     currentImageURL = postData.image || ''
-  } else writeBtn.textContent = '등록하기'
+  } else {
+    header.textContent = '게시글 작성'
+    writeBtn.textContent = '등록하기'
+  }
 
   function validateTitle() {
     const value = titleInput.value.trim()
