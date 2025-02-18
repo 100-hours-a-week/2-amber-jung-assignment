@@ -80,4 +80,24 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     })
   })
+
+  // 프로필 사진 첨부
+  const editProfileBtn = document.querySelector('.edit-profile-btn')
+  const userProfileImg = document.querySelector('.user-profile-img img')
+
+  const fileInput = document.createElement('input')
+  fileInput.type = 'file'
+  fileInput.accept = 'image/*'
+  fileInput.style.display = 'none'
+  document.body.appendChild(fileInput)
+
+  editProfileBtn.addEventListener('click', () => fileInput.click())
+  fileInput.addEventListener('change', (event) => {
+    const file = event.target.files[0]
+    if (file) {
+      const imageUrl = URL.createObjectURL(file)
+      userProfileImg.src = imageUrl
+      userProfileImg.style.objectFit = 'cover'
+    }
+  })
 })
