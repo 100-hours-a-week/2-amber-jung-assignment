@@ -1,5 +1,8 @@
-.post-body {
+body {
   background-color: #f4f5f7;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .header-content {
@@ -10,18 +13,14 @@
   visibility: hidden;
 }
 
-.post {
+main {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-.post-container {
+  justify-content: center;
+  gap: 24px;
   width: min(800px, 90%);
   padding: 0 16px;
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
 }
 
 .post-title {

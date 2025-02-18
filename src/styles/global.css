@@ -16,7 +16,7 @@ html {
   gap: 4px;
 }
 
-.label {
+label {
   font-size: 13px;
   font-weight: 600;
 }
@@ -48,7 +48,7 @@ a {
   margin-bottom: 40px;
 }
 
-.header {
+header {
   font-size: 32px;
   font-weight: 400;
   width: 100%;
